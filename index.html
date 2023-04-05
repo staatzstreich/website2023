@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Michael Staatz – Web Developer</title>
+    <link rel="stylesheet" type="text/css" href="css/minireset.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/animations.css">
+    <script defer src="js/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
+</head>
+
+<body>
+<div id="wallpaper" class="wallpaper" data-image="images/st_peter_ording.jpg"></div>
+<div class="content">
+    <aside class="side">
+        <figure id="picture" class="picture">
+            <div class="picture-shadow"></div>
+            <img id="pictureImage"
+                 class="picture-image"
+                 src="images/michael.jpg"
+                 srcset="images/michael.jpg,
+                         images/michael@2x.jpg 2x,
+                         images/michael@3x.jpg 3x"
+                 alt="Portrait of Michael Staatz"
+                 width="320"
+                 height="320"
+            >
+        </figure>
+    </aside>
+    <main class="about">
+        <h1 class="name">
+            Hi, I'm Michael Staatz
+        </h1>
+        <p class="job">
+            Web developer
+        </p>
+        <hr class="hr">
+        <div class="description">
+            <p>
+                I spend my time with my family, like web development with PHP and TYPO3 but also with React and TypeScript and love to explore other technologies.
+            </p>
+        </div>
+        <div class="contact">
+            <a class="button" href="mailto:michael@staatzstreich.de">
+                Get in touch
+            </a>
+        </div>
+        <ul class="social">
+            <li>
+                <a href="https://github.com/staatzstreich">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/michael-staatz-751723207/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+        </ul>
+        <hr class="hr">
+        <div class="association_community">
+            <img src="images/Association_Community.svg" alt="Image of TYPO3 Association Community">
+        </div>
+    </main>
+</div>
+<noscript>
+    <style>
+        .wallpaper {
+            animation-name: zoomOut;
+        }
+        .picture {
+            animation-name: dropIn;
+        }
+        .association_community {
+            animation-name: slideUp;
+        }
+    </style>
+</noscript>
+</body>
+
+</html>
