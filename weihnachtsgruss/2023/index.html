@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <link href="/favicon.ico" rel="icon" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+    <link href="/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png" />
+    <link href="/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png" />
+    <meta content="Private Webseite von Michael Staatz" name="description" />
+    <link href="/logo192.png" rel="apple-touch-icon" />
+    <link href="/manifest.json" rel="manifest" />
+    <title>Familie Staatz - Weihnachtsgruss 2023</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+    <link rel="stylesheet" type="text/css" href="/css/animations.css" />
+    <link rel="stylesheet" type="text/css" href="/css/weihnachtsgruss.css" />
+    <link rel="stylesheet" href="/css/photoswipe.css">
+    <script defer src="/js/main-obfuscated.js"></script>
+    <script type="module">
+        import PhotoSwipeLightbox from '/js/photoswipe-lightbox.esm.min.js';
+        function isPhonePortrait() {
+            return window.matchMedia('(max-width: 600px) and (orientation: portrait)').matches;
+        }
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '#gallery--family-staatz',
+            children: 'a',
+
+            initialZoomLevel: (zoomLevelObject) => {
+                if (isPhonePortrait()) {
+                    return zoomLevelObject.vFill;
+                } else {
+                    return zoomLevelObject.fit;
+                }
+            },
+            secondaryZoomLevel: (zoomLevelObject) => {
+                if (isPhonePortrait()) {
+                    return zoomLevelObject.fit;
+                } else {
+                    return 1;
+                }
+            },
+
+            maxZoomLevel: 1,
+
+            pswpModule: () => import('/js/photoswipe.esm.min.js')
+        });
+        lightbox.init();
+        document.querySelector('#gallery--family-staatz a:nth-of-type(1)').click();
+    </script>
+</head>
+<body>
+    <div class="wallpaper" data-image="/images/st_peter_ording.jpg" id="wallpaper" style="z-index: -1000;"></div>
+    <div class="container mx-auto flex justify-center">
+        <div id="gallery--family-staatz">
+            <a href="/images/Weihnachten_1.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="pt-4" src="/images/Weihnachten_1.png" alt="" style="width: 320px" />
+            </a>
+            <a href="/images/Weihnachten_2.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="py-4" src="/images/Weihnachten_2.png" alt="" style="width: 320px" />
+            </a>
+            <a href="/images/Weihnachten_3.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="py-4" src="/images/Weihnachten_3.png" alt="" style="width: 320px" />
+            </a>
+            <a href="/images/Weihnachten_4.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="py-4" src="/images/Weihnachten_4.png" alt="" style="width: 320px" />
+            </a>
+            <a href="/images/Weihnachten_5.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="py-4" src="/images/Weihnachten_5.png" alt="" style="width: 320px" />
+            </a>
+            <a href="/images/Weihnachten_6.png"
+               data-pswp-width="683"
+               data-pswp-height="1024"
+               target="_blank">
+                <img class="" src="/images/Weihnachten_6.png" alt="" style="width: 320px" />
+            </a>
+        </div>
+    </div>
+    <noscript>
+        <style>
+            .wallpaper {
+                animation-name: zoomOut;
+            }
+
+            .picture {
+                animation-name: dropIn;
+            }
+        </style>
+    </noscript>
+</body>
+</html>

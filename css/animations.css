@@ -9,7 +9,7 @@
         transform: scale(1);
     }
 }
-.association_community,
+
 .wallpaper,
 .picture-shadow,
 .picture-image,
@@ -197,9 +197,7 @@
     animation-delay: 1.2s;
 }
 
-.association_community {
-    animation-delay: 1s;
-    animation-duration: 1500ms;
-    animation-name: slideUp;
-    animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1.5);
+.weihnachtsgruss_main {
+    animation-name: bounceIn;
+    animation-duration: 2s;
 }
