@@ -86,9 +86,13 @@ console.log("%cWillkommen bei staatzstreich.de 💖", styles);
 
 document.addEventListener('DOMContentLoaded', function() {
     loadImage('wallpaper');
-    loadImage('pictureImage', 'picture');
+    if (!window.document.location.pathname.includes('weihnachtsgruss')) {
+        loadImage('pictureImage', 'picture');
+    }
     const link = document.getElementById('link');
-    link.addEventListener('click', function () {
-        link.href = emailScramble().decode(link.href);
-    });
+    if (link !== null) {
+        link.addEventListener('click', function () {
+            link.href = emailScramble().decode(link.href);
+        });
+    }
 });
